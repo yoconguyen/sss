@@ -1,7 +1,7 @@
 <ul id="result">
     <li id="sua1" *ngFor="let task of tasks">
         <div class="check-radio">
-            <input name="gender" value="" type="radio">
+            <input #a (click)="checkbutton(a.value)" [value]="task.description" name="gender"  type="radio">
         </div>
         <div class="text">
             <p>{{task.taskName}}</p>
@@ -21,6 +21,8 @@
         </div>            
           <div class="button">
               <button id="btn" class="btn" type="submit" (click)="addTask()">Add task</button>
+              <button id="btn" class="btn" type="submit" (click)="deleteTask()">Delete task</button>
+
           </div>
     </form>  
     <!-- <pre>{{ addTaskForm.value | json }}</pre>  -->

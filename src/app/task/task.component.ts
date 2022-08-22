@@ -26,7 +26,7 @@ export class TaskComponent implements OnInit {
   }
 
   constructor(private todoService: TodoService) { }
-
+checkbut=''
   ngOnInit(): void {
     // this.todoService.getvalue().subscribe();
 
@@ -38,5 +38,12 @@ export class TaskComponent implements OnInit {
     let c ={taskName: this.addTaskForm.value.taskName, description:this.addTaskForm.value.description}
     this.tasks.push(c)
     
+  }
+  checkbutton(e:any){
+    this.checkbut=e
+  }
+  deleteTask(){
+  let a=this.tasks.filter(data=>data.description!==this.checkbut)
+  this.tasks=a
   }
 }
