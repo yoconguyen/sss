@@ -1,0 +1,27 @@
+<ul id="result">
+    <li id="sua1" *ngFor="let task of tasks">
+        <div class="check-radio">
+            <input name="gender" value="" type="radio">
+        </div>
+        <div class="text">
+            <p>{{task.taskName}}</p>
+            <small>{{task.description}}</small>
+        </div>
+        <div class="ti-slice" (click)="onSelect(task)"></div>
+    </li>
+</ul>
+<!-- add-task -->
+<div class="content-box" id="content-box">
+    <form class="addTask-form" [formGroup]="addTaskForm">
+        <div class="box">
+            <input id="phanbietsuavaxoa" type="text" style="display: none;" class="box-holder1"
+                placeholder="Task name">
+            <input type="text" id="box-holder1" class="box-holder1" placeholder="Task name" formControlName="taskName">
+            <input type="text" id="box-holder2" class="box-holder2" placeholder="Description" formControlName="description">
+        </div>            
+          <div class="button">
+              <button id="btn" class="btn" type="submit" (click)="addTask()">Add task</button>
+          </div>
+    </form>  
+    <!-- <pre>{{ addTaskForm.value | json }}</pre>  -->
+  </div>

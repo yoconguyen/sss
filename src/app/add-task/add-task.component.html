@@ -1,0 +1,14 @@
+<div class="content-box" id="content-box">
+    <form class="addTask-form" [formGroup]="addTaskForm">
+        <div class="box">
+            <input id="phanbietsuavaxoa" type="text" style="display: none;" class="box-holder1"
+                placeholder="Task name">
+            <input type="text" id="box-holder1" class="box-holder1" placeholder="Task name" formControlName="taskName">
+            <input type="text" id="box-holder2" class="box-holder2" placeholder="Description" formControlName="description">
+        </div>            
+          <div class="button">
+              <button id="btn" class="btn" type="submit" (click)="addTask()">Add task</button>
+          </div>
+    </form>  
+    <!-- <pre>{{ addTaskForm.value | json }}</pre>  -->
+  </div>

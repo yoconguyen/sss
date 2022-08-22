@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="header">
+      <div class="search">
+          <div class="quick_find">
+              <div class="ti-search"></div>
+              <div class="search-input1">
+                  <input type="text" id="search-input" class="search-input" placeholder="search" oninput="search()">
+              </div>
+          </div>
+          <button class="search-btn" onclick="search()">Tìm kiếm</button>
+      </div>
+  </div>
+
+  <div class="t-body">
+      <div class="slider">
+          <ul class="task-menu">
+              <li>
+                  <div class="inbox">
+                      <div class="inbox-icon">1</div>
+                      <div class="inbox-text">Inbox</div>
+                      <div class="inbox-number">2</div>
+                  </div>
+              </li>
+              <li>
+                  <div class="today">
+                      <div class="today-icon">2</div>
+                      <div class="today-text">Today</div>
+                      <div class="today-number">2</div>
+                  </div>
+              </li>
+              <li>
+                  <div class="upcoming">
+                      <div class="upcoming-icon">3</div>
+                      <div class="upcoming-text">Upcoming</div>
+                      <div class="upcoming-number">2</div>
+                  </div>
+              </li>
+              <li>
+                  <div class="filter">
+                      <div class="filter-icon">4</div>
+                      <div class="filter-text">Filtes & Lables</div>
+                      <div class="filter-number">2</div>
+                  </div>
+              </li>
+          </ul>
+
+          <div class="project">
+              <div class="ti-angle-down"></div>
+              <div class="project-text">
+                  <b>Project</b>
+              </div>
+              <div class="ti-plus"></div>
+          </div>
+      </div>
+
+      <div class="content">
+          <div class="content-menu">
+              <div class="content-menu-header">
+                  <div class="simple_content">
+                      <h1>Inbox</h1>
+                  </div>
+                  <div class="icon comment">
+                      <div class="ti-comment"></div>
+                      <div>Comment</div>
+                  </div>
+                  <div class=" icon view">
+                      <div class="ti-view-list-alt"></div>
+                      <div>View</div>
+                  </div>
+                  <div class="icon ti-more"></div>
+              </div>
+              <app-task></app-task>
+          </div>
+          
+      </div>
+  </div>
+</div>
+  
